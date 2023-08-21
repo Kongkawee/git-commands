@@ -1,16 +1,14 @@
 ## Commands for Remotes
 
-> TODO Write your answers and then remove **all** the TODO comments
-   ```
 
 1. List all your remote repositories and show their URLs:
    ```
-   Todo write the git command for this
+   git remote -v
    ```
 
 2. View details about a remote repo named `origin`, including all the remote branches and local tracking branches for `origin`:
    ```
-   Todo write the git command for this
+   git remote show origin
    ```
 
 3. (Pushing a new branch) You commit some files to the `dev-foo` branch and try to "push" them to Github, but it fails as shown here:
@@ -21,11 +19,12 @@
    fatal:  The current branch dev-foo has no upstream branch. 
    ```
    Explain this error.
-   > TODO Since you are writing an explanation (not shell commands), write your answer in lines beginning with `>` like this one. The text will be formatted and may include Markdown.
-
+   `Because in the remote repository do not have this branch yet, We have to set the origin before at the first time.`
 
 4. The command to push `dev-foo` to `origin` as a **new remote branch** on `origin` is:
-
+   ```
+   git push -u origin dev-foo
+   ```
 
 5. (Create a local tracking branch for a remote branch) The remote repository (`origin`) has a branch named `e2e-test` that you don't have in your local repository.   
    The command to create a new local branch as a copy of the remote `e2e-test` branch that **tracks** the remote branch is:
